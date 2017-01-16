@@ -1,1 +1,1 @@
-export { Config } from './ui';
+export { UI } from './ui';

@@ -1,2 +1,2 @@
-export { Config } from './ui';
+export { UI } from './ui';
 //# sourceMappingURL=index.js.map
