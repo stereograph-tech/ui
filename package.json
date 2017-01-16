@@ -1,6 +1,6 @@
 {
   "name": "stereograph-ui",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Stereograph UI Framework: A true grid css framework.",
   "author": "Danny Bullis",
   "repository": {
@@ -19,8 +19,8 @@
     "CSS",
     "Grid",
     "framework"
-  ],  
-  "license": "MIT",  
+  ],
+  "license": "MIT",
   "dependencies": {
     "body-parser": "^1.15.2",
     "express": "^4.14.0"
