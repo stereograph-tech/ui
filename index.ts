@@ -1,1 +1,1 @@
-export { Config, GridConfig, ClassConfig, ClassPropertiesConfig } from 'ui';
+export { Config } from 'ui';
