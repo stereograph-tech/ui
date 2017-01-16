@@ -8,7 +8,7 @@ find . -type d -delete
 cd $pwd
 
 echo 'Compiling TypeScript files...'
-tsc './index.ts'
+tsc
 
 echo 'Updating git...'
 git add . && git commit -m 'Version update' && git push origin master
