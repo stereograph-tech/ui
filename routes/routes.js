@@ -19,6 +19,7 @@ var appRouter = (app) => {
 	});
 
 	app.get('/config', (req, res) => {
+		
 		fs.readFile('build/config.json', (err, data) => {
 			if(err) {
 				res.send(err);
