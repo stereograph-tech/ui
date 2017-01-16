@@ -1,6 +1,6 @@
-export interface Config {
+export module Config {
 	
-	grid: {
+	export interface Grid {
 		base: number;
 		unit: string;
 		filename: string;	
@@ -18,5 +18,5 @@ export interface Config {
 			}[]			
 		}[]
 	};
-	
+
 }
