@@ -1,13 +1,13 @@
 export declare abstract class UI {
     grid: GridConfig;
 }
-export declare abstract class GridConfig {
+export declare class GridConfig {
     base: number;
     unit: string;
     filename: string;
     classes: ClassConfig[];
 }
-export declare abstract class ClassConfig {
+export declare class ClassConfig {
     name: string;
     decimals?: boolean;
     description: string;
@@ -16,7 +16,7 @@ export declare abstract class ClassConfig {
     increment: number;
     properties: PropertyConfig[];
 }
-export declare abstract class PropertyConfig {
+export declare class PropertyConfig {
     name: string;
     value: string | number;
     important: boolean;

@@ -1,26 +1,26 @@
 export abstract class UI {
-	public grid: GridConfig;
+	public grid: GridConfig = new GridConfig();
 }
 
-export abstract class GridConfig {
-	public base: number;
-	public unit: string;
-	public filename: string;	
-	public classes: ClassConfig[]
+export class GridConfig {
+	public base: number = 10;
+	public unit: string = 'em';
+	public filename: string = '';
+	public classes: ClassConfig[] = new Array<ClassConfig>();
 }
 
-export abstract class ClassConfig {	
-	public name: string;
-	public decimals?: boolean;
-	public description: string;
-	public min: number;
-	public max: number;
-	public increment: number;
-	public properties: PropertyConfig[];
+export class ClassConfig {	
+	public name: string = '';
+	public decimals?: boolean = false;
+	public description: string = '';
+	public min: number = 0;
+	public max: number = 0;
+	public increment: number = 0;
+	public properties: PropertyConfig[] = new Array<PropertyConfig>();
 }
 
-export abstract class PropertyConfig {
-	public name: string;
-	public value: string|number;
-	public important: boolean;
+export class PropertyConfig {
+	public name: string = '';
+	public value: string|number = null;
+	public important: boolean = false;
 }
