@@ -1,6 +1,6 @@
-export interface Config {
+export abstract class Config {
 	
-	grid: {
+	public grid: {
 		base: number;
 		unit: string;
 		filename: string;	

@@ -1,4 +1,4 @@
-export interface Config {
+export declare abstract class Config {
     grid: {
         base: number;
         unit: string;
