@@ -1,5 +1,5 @@
 {
-  "name": "stereograph-ui",
+  "name": "@stereograph/ui",
   "version": "1.0.14",
   "description": "Stereograph UI Framework: A true grid css framework.",
   "author": "Danny Bullis",
