@@ -1,0 +1,292 @@
+html, body {
+	height: 100%;
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+	font-family: 'Segoe UI semilight', Arial, sans-serif;
+}
+
+body {
+	background: url(../images/bg.jpg) repeat;
+}
+
+.fragment > header {
+	background-color: rgba(0, 0, 255, 0.6);
+	color: #fff;
+}
+
+
+.gridOverlay {
+	display: none;
+	position: absolute;
+	z-index: 100;
+	pointer-events: none;
+	height: 100%;
+	width: 100%;
+	top: 0px;
+	left: 0px;
+	background: url(../images/grid.png) repeat;
+	background-size: 10em 10em;
+}
+
+section .row, section .panoramic {
+	background-color: rgba(200, 255, 30, 0.5);
+}
+section .row > div {
+	background-color: rgba(0, 100, 255, 0.25);
+}
+section .col > div {
+	background-color: rgba(0, 255, 20, 0.25);
+}
+section .col {
+	background-color: rgba(0, 255, 0, 0.25);
+}
+section .center > div {
+	background-color: rgba(200, 255, 120, 0.5);
+}
+
+section .grid > div > div {
+	background-color: rgba(50, 30, 20, 0.5);
+	color: #fff;
+}
+
+div.img {
+	background-color: #fff;
+}
+
+button {
+	font-family: "Segoe UI Symbol";
+	border-radius: 4em;
+	height: 3em;
+	width: 3em;
+	border: 2px solid #000;
+}
+
+.icon:after{
+	content: '\E10C';
+}
+
+a {
+	white-space: nowrap;
+	cursor: pointer;
+	color: #16a;
+	max-width: 100%;
+	max-height: 100%;
+	text-decoration: none;
+}
+
+.stretch {
+	background-color: rgba(255, 255, 100, 0.5) !important;
+}
+.stretchX {
+	background-color: rgba(255, 0, 100, 0.5) !important;
+}
+.stretchY {
+	background-color: rgba(255, 50, 100, 0.5) !important;
+}
+.colWrap, .rowWrap, .wrap {
+	background-color: rgba(50, 120, 90, 0.5) !important;
+}
+
+/*
+*	NAVIGATION GENERIC
+*/
+.navButton {
+	cursor: pointer;
+	z-index: 1000;
+	height: 6em !important;
+	width: 6em;
+	background-repeat: no-repeat;
+	background-size: 20px 20px;
+	background-position: center;
+	opacity: 0.5;
+}
+.navButton:hover {
+	opacity: 1;
+}
+#dropdownUnderlay {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	z-index: 900;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	display: none;
+}
+.dropdown {
+	position: absolute;
+	top: 5px;
+	left: 85px;
+	display: none;
+	background-color: rgba(255, 255, 255, 0.8);
+	border: 2px solid #000;
+	list-style-type: none;
+	list-style-position: inner;
+	margin: 0px;
+	padding: 5px;
+	z-index: 1001;
+}
+.dropdown ul {
+	margin: 0px;
+	padding: 0px;
+}
+.dropdown li {
+	list-style-type: none;
+	list-style-position: inner;
+	padding: 5px 0px;
+	margin: 0px;
+	cursor: pointer;
+	padding: 5px;
+}
+.dropdown li:hover {
+	background-color: rgba(0, 0, 0, 0.25);
+}
+
+/*
+*	PAGE INFO
+*/
+#pageInfo {
+	background-color: rgba(5, 6, 7, 0.95);
+	display: flex;
+	top: 0px;
+	left: 0px;
+	position: fixed;
+	flex-direction: column wrap;
+	width: 8em;
+	height: 100%;
+	z-index: 1000;
+}
+
+#fontSizeSelect {
+	height: 3em;
+	text-align: center;
+}
+#fontSizeSelect option {
+	text-align: right;
+}
+
+/*
+*	GRID DISPLAY
+*/
+#gridMode {
+	background-image: url(../images/gridIcon.png);
+}
+
+/*
+*	ORIENTATION CHANGE ICON
+*/
+#orientationModeIcon {
+	background-image: url(../images/deviceRotate.png);
+}
+
+/*
+*	HOME ICON
+*/
+#homeIcon {
+	background-image: url(../images/home.png);
+}
+
+/*
+*	DEVICE DIMENSIONS
+*/
+#deviceDimContainer {
+	position: relative;
+	z-index: 1000;
+}
+#deviceDim > span {
+	font-size: 10px;
+	color: #3Fa;
+	cursor: pointer;
+}
+#deviceDim:hover {
+
+}
+
+/*
+*	NAV
+*/
+#navContainer {
+	z-index: 1000;
+	position: relative;
+}
+#navIcon {
+	background-image: url(../images/listview.png);
+}
+
+/*
+*	VIEW SOURCE
+*/
+#viewSourceContainer {
+	position: relative;
+	z-index: 1000;
+}
+#viewSourceIcon {
+	background-image: url(../images/view.png);
+	background-size: 25px 25px;
+}
+#viewSourceDropdown {
+	height: auto;
+	width: auto;
+	min-width: 800px;
+	max-height: 700px;
+	max-width: 1000px;
+	overflow: auto;
+	resize: both;
+}
+#viewSourceDropdown pre {
+	width: 100%;
+	height: 100%;
+	resize: both;
+	overflow: hidden;
+	white-space: pre-wrap;
+	display: block;
+}
+
+/*
+*	DISCLAIMERS
+*/
+.disclaimer {
+	border: 2px solid #000;
+	height: auto;
+	padding: 30px;
+	background: rgba(100, 200, 200, 0.75) url(../images/important.png) no-repeat;
+	background-position: top center;
+	background-size: 20px 20px;
+	position: fixed;
+	top: calc(50% - 100px);
+	right: 5px;
+	max-width: 200px;
+	cursor: pointer;
+}
+.disclaimerMin {
+	padding: 10px;
+	height: 30px;
+	width: 30px;
+	background-position: center center;
+	overflow: hidden;
+}
+.disclaimerMin > * {
+	display: none;
+}
+.disclaimer:hover {
+	border-color: #610;
+}
+#portraitNotification {
+	position: fixed;
+	bottom: 0px;
+	height: 5em;
+	width: 100%;
+	background-color: rgba(255, 0, 0, 0.75);
+	color: yellow;
+	z-index: 100;
+}
+
+/*
+*	PAGE NAV BUTTONS
+*/
+#pageNavPrev > div, #pageNavNext > div {
+	color: #fff;
+	font-size: 20px;
+	cursor: pointer;
+}

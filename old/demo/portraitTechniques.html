@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="js/jquery-1.11.0.min.js"></script>
+	<script src="js/main.js"></script>
+</head>
+<body><div id='loadingScreen' style='height: 100%; width: 100%; background: #000 url(images/loading.gif) no-repeat; background-position: center; background-size: 50px 50px; position: fixed; top: 0px; left: 0px;'></div>
+
+	<div id='pageInfo' class='col pad1'>
+	</div>
+
+	<!-- customer details -->
+	<div class='fragment'>
+
+		<header><h1>Portrait Techniques</h1></header>
+
+		<section role='main' class='panoramic'>
+
+			<!--
+				* example of @media query combined with fontSize
+				* links
+			-->
+			<div class='col pad width50 marginRight2'>
+				<h2>Introduction</h2>
+				<p>The overarching concept when it comes to switching elegantly between portrait and landscape is to consider some fundamental principles:
+					<ol>
+						<li>Don't redesign the wheel; there is no need to redesign the entire app in the event that someone rotates their device.
+						Users shouldn't have to relearn the entire UI when the orientation changes.</li>
+						<li>A horizontal landscape layout should switch to a vertical portrait layout, and vice versa.</li>
+						<li>Listen to KISS: Keep It Simple, Stupid.</li>						
+					</ol>
+				</p>
+
+				<hr />
+				<h3>How it's applied</h3>
+				<p><strong>numpad.css</strong>:
+<pre class='prettyprint lang-html'>
+<code>
+    &lt;div class='col'&gt; Column 1 &lt;/div&gt;
+    
+    &lt;!-- 
+        This &quot;shim&quot; column will collapse under 1024px.
+        Normally, it will display the common 4GU (grid unit)
+        gutter.
+    --&gt;
+    &lt;div class='col width4 height4'&gt; Column 2 &lt;/div&gt;
+    
+    &lt;div class='col'&gt; Column 1 &lt;/div&gt;
+</code>
+</pre>
+
+<p>By changing the flow of a row-based layout to a column-based layout
+when switching to portrait view, the height of the <em>shim</em> column
+above will become the vertical spacer between columns. 
+<pre class='prettyprint lang-css'>
+<code>
+    /* Layout.css */
+    /* screen width under 1024px (portrait) */
+    @media (max-width: 1024px) {
+	
+        section[role=main].panoramic, section[role=main].row {
+            flex-direction: column;
+        }
+    }
+</code>
+</pre>
+</p>
+				<hr />
+				<h3>Some considerations</h3>
+				<p>
+					The UX designers have been careful to keep the gutter between columns consistent throughout
+                    the layout. A hearty 40px (4GU) margin has been the chosen spacing, which means we can likely
+                    create a simple CSS class called "gutter" to maintain our spacing. In case this might change
+                    in different orientations, it will be easy enough to add a few media queries to control
+                    gutter spacing, if necessary.
+				</p>
+                
+				<a href='index.html'><h3>Back up the Rabbit Hole &rarr;</h3></a>
+ 			</div>
+
+			<div>
+				<div class='stretchX pad'>
+					<h2>Examples</h2>
+				</div>
+				
+				<div class='row pad'>
+					<h2>Coming soon</h2>
+				</div>
+			</div>
+		</section>
+
+	</div>	<!-- end .fragment -->
+
+<!--<div class='disclaimer disclaimerMin'>
+	
+</div>-->
+<div id='portraitNotification' class='center'><h6>portrait mode - Support coming soon</h6></div>
+</body>
+</html>

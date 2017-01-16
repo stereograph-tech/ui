@@ -1,0 +1,34 @@
+.numpad {
+	/*
+		default font-size = 10px
+		inherited from the body
+	*/
+	width: 33em;
+	overflow: visible;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+#numpadContainer {
+	flex: 1 1 auto;
+}
+
+/* any screen width below 1024px */
+@media (max-width: 1024px) {
+	.numpad {
+		font-size: 8px;
+		min-width: 33em;
+		width: 100%;
+		margin-top: 2em;
+	}
+	#numpadContainer {
+		flex: 1 0 auto;
+		width: 100%;
+	}
+}
+
+/* any screen width above 1600px */
+@media (min-width: 1600px) {
+	.numpad {
+		font-size: 12px;
+	}
+}

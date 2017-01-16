@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="js/jquery-1.11.0.min.js"></script>
+	<script src="js/main.js"></script>
+</head>
+<body><div id='loadingScreen' style='height: 100%; width: 100%; background: #000 url(images/loading.gif) no-repeat; background-position: center; background-size: 50px 50px; position: fixed; top: 0px; left: 0px;'></div>	
+	
+	<div id='pageInfo' class='col pad1'>
+	</div>
+	
+	<!-- customer details -->
+	<div class='fragment'>
+		
+		<header><h1>The mighty EM</h1></header>
+					
+		<section role='main' class='panoramic'>
+			
+			<!--
+				* using the em / font size
+				* examples of the em changing the grid
+				* link to changing individual elements' base font-size within the grid
+				* links
+			-->
+			<div class='col pad width40 marginRight2'>
+				<h2>Introduction</h2>
+				<p>An <em>EM</em>, unlike <em>px</em> or <em>%</em> is a sizeless unit, meaning that it by itself does not have a set value. 
+					Instead, it inherits its value from a font-size. That is because the &quot;EM&quot; literally refers to the width of the 
+					capital letter <strong>&quot;M&quot;</strong> in the current font (roughly speaking). The EM originated in the old days of wood-block typesetting.
+				</p>
+				
+				<hr />
+				<h3>How It Works</h3>
+				<p>
+					As you increase or decrease the font-size, the value of the EM increases or decreases as well. This means that you can control the entire grid 
+					size of everything inside of the <code>&lt;body&gt;</code> by changing 1 simple value.
+				</p>
+				
+				<hr />
+				<h3>Where It's Applied</h3>
+				<p><strong>Layout.css</strong> is where we define our base font-size (and grid unit size). It looks something like this:</p>
+				<p>
+<pre class='prettyprint lang-css'>
+<code>
+    body {
+        font-size: 10px; 
+    }
+</code>
+</pre>
+				</p>
+				<p>The examples on the right show the effect on the entire layout by changing the <strong><code>body</code></strong> font-size.</p>
+				
+				<hr />
+				<h3>Granular Control</h3>
+				<p>
+					To increase the layout's responsive behavior, UX designers will want to have full control of various UI elements throughout the layout. 
+					In the examples on the right, everything scales. But say we <em>only</em> want the number pad to scale. Can we do that?
+				</p>
+				<a href='granularGrid.html'><h3>Yes! See granular grid control in action &rarr;</h3></a>
+ 			</div>
+			
+			<div>
+				<div class='stretchX pad'>
+					<h2>Examples</h2>
+				</div>
+				<div class='row pad'>
+					<div class='width80'>
+						<h3>Font-size: 8px</h3>
+						<img src='photos/gridSize8Full.png' alt='Grid with body font-size: 8px' title='Font-size: 8px' />
+					</div>
+					<div class='width80'>
+						<h3>Font-size: 10px (default)</h3>
+						<img src='photos/gridSize10Full.png' alt='Grid with body font-size: 10px' title='Font-size: 10px' />
+					</div>
+					<div class='width80'>
+						<h3>Font-size: 12px</h3>
+						<img src='photos/gridSize12Full.png' alt='Grid with body font-size: 12px' title='Font-size: 12px' />
+					</div>
+				</div>
+			</div>
+		</section>
+		
+	</div>	<!-- end .fragment -->
+	
+<div id='portraitNotification' class='center'><h6>portrait mode - Support coming soon</h6></div>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="js/jquery-1.11.0.min.js"></script>
+	<script src="js/main.js"></script>
+</head>
+<body>
+	<div id='loadingScreen' style='height: 100%; width: 100%; background: #000 url(images/loading.gif) no-repeat; 
+		background-position: center; background-size: 50px 50px; position: fixed; top: 0px; left: 0px;'></div>	
+	
+	<div id='pageInfo' class='col pad1'>
+	</div>
+	
+	<!-- customer details -->
+	<div class='fragment'>
+		
+		<header><h1>Panoramic</h1></header>
+		
+		<section role='main' class='panoramic'>
+			<!-- explanation -->
+			<div class='col width40 marginRight6 pad1'>
+				<h2>Introduction</h2>
+				<p>
+					A panoramic view is one that is unbroken and extensive, as of a landscape. In the newest
+					apps, this is a common layout, which involves positioning page elements
+					in multiple columns, with horizontal scrolling to handle overflow.
+				</p>
+				
+				<hr />
+				<h3>How to use:</h3>
+				<p>In our Framework, this is really easy to implement:
+<pre class='prettyprint lang-html'>
+<code>
+    &lt;section role='main' class='panoramic'&gt;
+
+        &lt;!-- 40GU wide --&gt;
+        &lt;div class='col width40'&gt;Column 1&lt/div&gt;
+		
+        ... more columns ...
+        
+        &lt;!-- 40GU wide --&gt;
+        &lt;div class='col width40'&gt;Column N&lt/div&gt;
+		
+    &lt;/section&gt;
+</code>
+</pre>
+				</p>
+				
+				<hr />
+				<h3>Some Considerations</h3>
+				
+				<p>Scroll to the last column in this panoramic. You might notice that it has a 6GU (grid unit)
+				margin right. It has the <strong><code>marginRight6</code></strong> class applied
+				to it. 
+				However, there is a special trick used to get that margin to appear properly.
+				
+				This is an issue I'm currently trying to resolve. As a work around, you can click on the
+				view source (eyeball) icon above, where you will notice find a div commented as a &quot;Ghost Node&quot;
+				at the bottom.
+				</p>
+				
+				<hr />
+				<h3>One more thing...</h3>
+				
+				<p>Note: in the columns to the right, a specific width has been specified,
+				as is shown in the text in each column. However, columns by default will
+				naturally divide up the available horizontal width of their parent container,
+				without specifying any width. You can see what that looks like in the
+				</p>
+				<p>
+					<a href='panoramicFlex.html'>Panoramic Flex example &rarr;</a>
+				</p>
+			</div>
+			
+			<!-- Handles N columns with M possible widths -->
+			<div class='col width40 marginRight6 pad1'>
+				<h2>Width 40 grid units (400px)</h2>
+			</div>
+			<div class='col width38 marginRight6 pad1'><h2>Width 38 grid units (380px)</h2></div>
+			<div class='col width36 marginRight6 pad1'><h2>Width 36 grid units (360px)</h2></div>
+			<div class='col width34 marginRight6 pad1'><h2>Width 34 grid units (340px)</h2></div>
+			<div class='col width32 marginRight6 pad1'><h2>Width 32 grid units (320px)</h2></div>
+			<div class='col width30 marginRight6 pad1'><h2>Width 30 grid units (300px)</h2></div>
+			
+			<!-- ghost node -->
+			<div class='col width0'></div>
+		</section>
+		
+	</div>	<!-- end .fragment -->
+	
+<div id='portraitNotification' class='center'><h6>portrait mode - Support coming soon</h6></div>
+</body>
+</html>

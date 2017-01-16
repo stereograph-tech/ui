@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="js/jquery-1.11.0.min.js"></script>
+	<script src="js/main.js"></script>
+</head>
+<body>
+	<div id='loadingScreen' style='height: 100%; width: 100%; background: #000 url(images/loading.gif) no-repeat; 
+		background-position: center; background-size: 50px 50px; position: fixed; top: 0px; left: 0px;'></div>	
+	
+	<div id='pageInfo' class='col pad1'>
+	</div>
+		
+		<blueprint class='row coloring-on'>
+			<!--<header><h1>Columns (.col)</h1></header>-->
+			<!-- explanation -->
+			<div class='col width40 marginRight6 pad1'>
+				<h2>Introduction</h2>
+				<p>Meet the <strong><code>.col</code></strong> class. 
+					This class converts the element into a column. 
+					Technically, we could have created a &quot;.column&quot; class...but col is shorter.
+					In a column, children are laid out
+					vertically, as in the example on the right.
+				</p>
+				
+				<hr />
+				<h3>How to use:</h3>
+				<p>In our Framework, this is really easy to implement:
+<pre class='prettyprint lang-html'>
+<code>
+    &lt;div class='col'&gt;
+
+        &lt;!-- --&gt;
+        &lt;div class='row'&gt;Row 1&lt/div&gt;
+		
+        ... more rows or other columns ...
+        
+        &lt;!--  --&gt;
+        &lt;div class='row'&gt;Row N&lt/div&gt;
+		
+    &lt;/div&gt;
+</code>
+</pre>
+				</p>
+				
+				<hr />
+				<h3>How it works</h3>
+				
+				<p>Parent elements with <strong><code>.row</code></strong> applied
+				will stretch horizontally, and each sibling row will stack vertically.
+				Their vertical height flexes to take up the available vertical space.
+				</p>
+				
+				<p>				
+				Elements inside of a row without any extra styling is pretty boring,
+				as you can see by the contents of the first row. Each example to the right
+				will get progressively more complex.
+				</p>
+				
+				<hr />
+				<h3>Context</h3>
+				
+				<p>It can be tricky to work with rows on their own at the layout level if you
+				are creating rows in the wrong context. 
+				Rows want to line things up horizontally - including themselves.
+				To get rows to stack vertically, you
+				need to place them inside of a column. Up next:
+				</p>
+				<p>
+					<a href='cols.html'>Creating columns &rarr;</a>
+				</p>
+			</div>
+			
+			<div class='col pad'>
+				<h3>This is a <strong><code>.col</code></strong> class!</h3>
+				<!-- Handles N columns with M possible widths -->
+				<div class='row marginBottom1 pad'>
+					<h3>Row nested in the column</h3>
+				</div>
+				<h3>This is a new row with multiple nested columns. Columns stretch
+				vertically by default.</h3>
+				<div class='row'>
+					<div class='row pad'>
+						
+						<div class='col marginRight1'>column 1
+						</div>
+						<div class='col marginRight1'>column 2
+						</div>
+						<div class='col marginRight1'>column 3
+						</div>
+						<div class='col marginRight1'>column 4
+						</div>
+					</div>
+				</div>
+			</div>
+		</blueprint>
+	
+<div id='portraitNotification' class='center'><h6>portrait mode - Support coming soon</h6></div>
+</body>
+</html>

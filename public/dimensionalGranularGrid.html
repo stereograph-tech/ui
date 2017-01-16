@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="js/jquery-1.11.0.min.js"></script>
+	<script src="js/main.js"></script>
+</head>
+<body><div id='loadingScreen' style='height: 100%; width: 100%; background: #000 url(images/loading.gif) no-repeat; background-position: center; background-size: 50px 50px; position: fixed; top: 0px; left: 0px;'></div>
+
+	<div id='pageInfo' class='col pad1'>
+	</div>
+
+	<!-- customer details -->
+	<div class='fragment'>
+
+		<header><h1>Dimensional Granular Control</h1></header>
+
+		<section role='main' class='panoramic'>
+
+			<!--
+				* example of @media query combined with fontSize
+				* links
+			-->
+			<div class='col pad width50 marginRight2'>
+                <div>
+                    <h2>Introduction</h2>
+                    <p>Sometimes we can't escape the need to write extra CSS. You simply can't pit a generic grid framework against a complex
+                        UX with unique requirements and expect things to &quot;just work.&quot; But the same core principle of using the <strong>EM</strong>
+                        to control overall individual object scaling still applies.
+                    </p>
+                </div>
+                <div>
+                    <hr />
+                    <h3>What it does</h3>
+                    <p>
+                        It's a little hard to see in these images. What you're looking at is the numpad scaling in relation to the rest of the page contents,
+                        given the current device dimensions. Note that while the list also looks like it's scaling from image to image, don't be fooled. Nothing
+                        except for the numpad is scaling in the images.
+                    </p>
+                </div>
+                <div>
+                    <hr />
+                    <h3>How it's applied</h3>
+                    <p>This is where <em>control-specific</em> CSS comes into play...</p>
+                    <p><strong>numpad.css</strong>:</p>
+<pre class='prettyprint lang-css'>
+<code>
+    .numpad {
+        /* default font-size = 10px inherited from the body */
+    }
+
+    /* any screen width below 1024px */
+    @media (max-width: 1024px) {
+        .numpad {
+            font-size: 8px;
+        }
+    }
+
+    /* any screen width above 1600px */
+    @media (min-width: 1600px) {
+        .numpad {
+            font-size: 15px;
+        }
+    }
+</code>
+</pre>
+                    
+                </div>
+                <div>
+                    <hr />
+                    <h3>What about device orientation?</h3>
+                    <p>
+                        This leads us further down the rabbit hole. Device widths may change, but on devices that support <strong>portrait</strong> and <strong>landscape</strong>
+                        orientations, we enter an interesting new realm of unique challenges and a shift in gravity.
+                    </p>
+                    <a href='orientationGrid.html'><h3>When things go sideways &rarr;</h3></a>
+                </div>
+ 			</div>
+
+			<div class='div'>
+				<div class='stretchX pad'>
+						<h2>Examples</h2>
+				</div>
+				<div class='row pad'>
+					<div class='width80 height60'>
+						<h3>Screen width &lt; 1024px</h3>
+						<img src='photos/controlSize8_1024_down.png' alt='Screen width &lt; 1024px, Numpad font-size: 8px' title='Screen width &lt; 1024px, Numpad font-size: 8px' />
+					</div>
+					<div class='width80 height60'>
+						<h3>1024px &lt; Screen Width &lt; 1600px</h3>
+						<img src='photos/controlSize10_1024_1600.png' alt='Screen width &gt; 1024px &amp; &lt; 1600px, Numpad font-size: 10px' title='Screen width &gt; 1024px &amp; &lt; 1600px, Numpad font-size: 10px' />
+					</div>
+					<div class='width80 height60'>
+						<h3>Screen width &gt; 1600px</h3>
+						<img src='photos/controlSize15_1600_up.png' alt='Screen width &gt; 1600px, Numpad font-size: 15px' title='Screen width &gt; 1600px, Numpad font-size: 15px' />
+					</div>
+				</div>
+			</div>
+		</section>
+
+	</div>	<!-- end .fragment -->
+
+<div class='disclaimer disclaimerMin'>
+	<h4>Note: changing the font size of an individual object in the <code>body</code> will cause the object and its children to no longer align to the body's grid. However,
+	the object and its contents are still aligned to their own internal grid. Each grid unit of that new internal grid is equal to the object's specified font-size.</h4>
+</div>
+<div id='portraitNotification' class='center'><h6>portrait mode - Support coming soon</h6></div>
+</body>
+</html>

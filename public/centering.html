@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="js/jquery-1.11.0.min.js"></script>
+	<script src="js/main.js"></script>
+</head>
+<body><div id='loadingScreen' style='height: 100%; width: 100%; background: #000 url(images/loading.gif) no-repeat; background-position: center; background-size: 50px 50px; position: fixed; top: 0px; left: 0px;'></div>	
+	
+	<div id='pageInfo' class='col pad1'>
+	</div>
+	
+	<!-- customer details -->
+	<div class='fragment'>
+		<header><h1>Centering</h1></header>
+					
+		<section role='main' class='row'>
+        
+            <div class='col width42 pad'>
+                <div>
+                    <h2>Introduction</h2>
+                    <p>
+                        This is your <strong><code>.center</code></strong> class.
+                        It will expand to take up the
+                        available space and center its
+                        contents both vertically and 
+                        horizontally
+                    </p>
+                </div>
+                
+                <hr />
+                <div>
+                    <h2>Example</h2>
+                    <p>
+                        It's important to note that the height and width of the contents you are
+                        centering should be a defined size. You can do that by using the <strong><code>.height{N}</code></strong>
+                        or <strong><code>.width{N}</code></strong> classes.
+                    </p>
+<pre class='prettyprint lang-html'>
+<code>
+
+    &lt;section role="main"&gt;
+    
+        &lt;!-- this is your .center div  --&gt;
+        &lt;div class=&quot;center&quot;&gt;
+        
+            &lt!-- this div will be centered. --&gt;
+            &lt;div class=&quot;width32 height32&quot;&gt;
+            
+                &lt;!-- your contents here --&gt;
+            
+            &lt;/div&gt;
+        
+        &lt;/div&gt;
+        
+    &lt;/section&gt;
+</code>
+</pre>
+                </div>
+            </div>
+            
+            <!-- gutter -->
+            <div class='width4'></div>
+            
+            <div class='col'>
+                <div class='center'>
+
+                    <div class='width32 height32 pad1'>
+                        <div class='marginBottom1 shrink'>
+                            <h2>Sign In</h2>
+                        </div>
+                        
+                        <label class='marginBottom2'>
+                            <h4>Username</h4>
+                            <input type='text' />
+                        </label>
+                        
+                        <label>
+                            <h4>Password</h4>
+                            <input type='password' />
+                        </label>
+                    </div>
+            
+                </div>	
+            </div>
+		</section>
+	</div>	<!-- end .fragment -->
+	
+
+<div class='disclaimer'>
+	<h4>Please note. When using .center, the centered content might not 
+	line up with the grid. This is expected when the screen dimensions are not 
+	able to be evenly-divided by 10.</h4>
+</div>	
+
+<div id='portraitNotification' class='center'><h6>portrait mode - Support coming soon</h6></div>
+</body>
+</html>

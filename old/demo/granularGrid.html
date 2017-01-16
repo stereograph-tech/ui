@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="js/jquery-1.11.0.min.js"></script>
+	<script src="js/main.js"></script>
+</head>
+<body><div id='loadingScreen' style='height: 100%; width: 100%; background: #000 url(images/loading.gif) no-repeat; background-position: center; background-size: 50px 50px; position: fixed; top: 0px; left: 0px;'></div>	
+	
+	<div id='pageInfo' class='col pad1'>
+	</div>
+	
+	<!-- customer details -->
+	<div class='fragment'>
+		
+		<header><h1>Granular Grid Control</h1></header>
+					
+		<section role='main' class='panoramic'>
+			
+			<!--
+				* using the em / font size
+				* examples of the em changing the grid
+				* link to changing individual elements' base font-size within the grid
+				* links
+			-->
+			<div class='col pad width50 marginRight2'>
+				<h2>Introduction</h2>
+				<p>Meet the <strong><code>.fontSize{N}</code></strong> class. The <code>{N}</code> represents the various font sizes (in px) that you can use.
+				By default, the available sizes range from 5 - 30.
+					For example:
+<pre class='prettyprint lang-html'>
+<code>
+    &lt;div class='fontSize12'&gt; 
+        &lt;!-- 
+            This is an object somewhere in the layout.
+            Now all of its children inherit 12px as 
+            the value for their EM,
+            so, 12px = 1em.
+        --&gt; 
+    &lt;/div&gt;
+</code>
+</pre>
+				</p>
+				
+				<hr />
+				<h3>How it's applied</h3>
+				<p>Generally, you will only need to apply the CSS class to the element to see immediate results. However, the whole point of this framework
+					is to provide solid, responsive functionality. For example, a UX designer might desire to increase the size of an object <em>only at a
+					certain device dimension or orientation, such as landscape vs. portrait.</em> For that, we need to take a look at a more advanced example.</p>
+				
+				<hr />
+				<h3>Cross-dimensional granular control</h3>
+				<p>
+					This is where Framework shines. In order to achieve various results on various dimensions, we can use a variety of <code>@media</code> queries
+					to control the sizes of individual objects across the app.
+				</p>
+				<a href='dimensionalGranularGrid.html'><h3>Combining granular control with @media &rarr;</h3></a>
+ 			</div>
+			
+
+			<div>
+				<div class='stretchX pad'>
+					<h2>Examples</h2>
+				</div>
+				<div class='row pad'>
+					<div class='width80 height60 marginRight2'>
+						<h3>Body font-size: 10px, Numpad font-size: 5px</h3>
+						<img src='photos/gridSize10Control5.png' alt='Grid with body font-size: 10px, Numpad font-size: 5px' title='Body font-size: 10px, Numpad font-size: 5px' />
+					</div>
+					<div class='width80 height60 marginRight2'>
+						<h3>Body font-size: 10px, Numpad font-size: 8px</h3>
+						<img src='photos/gridSize10Control8.png' alt='Grid with body font-size: 10px, Numpad font-size: 8px' title='Body font-size: 10px, Numpad font-size: 8px' />
+					</div>
+					<div class='width80 height60 marginRight2'>
+						<h3>Body font-size: 10px, Numpad font-size: 10px</h3>
+						<img src='photos/gridSize10Full.png' alt='Grid with body font-size: 10px, Numpad font-size: 10px' title='Body font-size: 10px, Numpad font-size: 10px' />
+					</div>
+					<div class='width80 height60 marginRight2'>
+						<h3>Body font-size: 10px, Numpad font-size: 12px</h3>
+						<img src='photos/gridSize10Control12.png' alt='Grid with body font-size: 10px, Numpad font-size: 12px' title='Body font-size: 10px, Numpad font-size: 12px' />
+					</div>
+					<div class='width80 height60 marginRight2'>
+						<h3>Body font-size: 10px, Numpad font-size: 15px</h3>
+						<img src='photos/gridSize10Control15.png' alt='Grid with body font-size: 10px, Numpad font-size: 15px' title='Body font-size: 10px, Numpad font-size: 15px' />
+					</div>
+				</div>
+			</div>
+		</section>
+		
+	</div>	<!-- end .fragment -->
+
+<div class='disclaimer disclaimerMin'>
+	<h4>Note: When you add the <strong><code>.fontSize{N}</code></strong> class on any given UI object, the object and its contents will no longer
+		align to the <code>body</code> grid size. Rest assured, that the object's internal grid is still functioning normally!</h4>
+</div>
+<div id='portraitNotification' class='center'><h6>portrait mode - Support coming soon</h6></div>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="js/jquery-1.11.0.min.js"></script>
+	<script src="js/main.js"></script>
+</head>
+<body><div id='loadingScreen' style='height: 100%; width: 100%; background: #000 url(images/loading.gif) no-repeat; background-position: center; background-size: 50px 50px; position: fixed; top: 0px; left: 0px;'></div>	
+	
+	<div id='pageInfo' class='col pad1'>
+	</div>
+	
+	<!-- customer details -->
+	<div class='fragment'>
+		<!-- common header -->
+		<header><h1>List + Numpad</h1></header>
+		
+		<section role='main' class='row'>
+            
+            <div class='col width40 pad'>
+                <div>
+                    <h2>Introduction</h2>
+                    <p>
+                        The listivew + numpad view is a very basic view consisting of 3 parts:
+                        <ol>
+                            <li>The flexible column</li>
+                            <li>The gutter</li>
+                            <li>The srink column</li>
+                        </ol>
+                    </p>
+                </div>
+                <div>
+                    <hr />
+                    <h2>Example</h2>
+<pre class='prettyprint lang-html'>
+<code>
+
+    &lt;section role=&quot;main&quot; class=&quot;row&quot;&gt;
+    
+        &lt;!-- flexible column --&gt;
+        &lt;div class=&quot;col&quot;&gt;
+        
+            &lt;!-- dynamically insert listview here --&gt;
+        
+        &lt;/div&gt;
+        
+        &lt;!-- invisible column spacer (gutter) --&gt;
+        &lt;div class=&quot;width4&quot;&gt;&lt;/div&gt;
+        
+        &lt;!-- &quot;shrink-wrapped&quot; column --&gt;
+        &lt;div class=&quot;shrink&quot;&gt;
+        
+            &lt;!-- dynamically insert numpad here --&gt;
+        
+        &lt;/div&gt;
+    
+    &lt;/section&gt;
+
+</code>
+</pre>
+                </div>
+                
+                <div>
+                    <hr />
+                    <h2>Core Concepts</h2>
+                    <p>
+                        <strong><code>.col</code></strong>s flex by default.
+                    </p>
+                    
+                    <p>
+                        The <strong><code>.width4</code></strong> div acts as a &quot;gutter&quot; between columns.
+                        This will soon be replaced by an explicit <strong><code>.gutter</code></strong> class.
+                    </p>
+                    
+                    <p>
+                        this <strong><code>.shrink</code></strong> class acts as a
+                        column, but instead of flexing to take up the
+                        available space, it instead &quot;shrinks&quot;,
+                        or &quot;shrink-wraps&quot; its contents. This
+                        is particularly useful when you have a fixed-
+                        width control (such as a numpad). If the width
+                        of the control changes, this alleviates the need
+                        for manually updating the column width everywhere
+                        there is a numpad; the column instead fits to
+                        the contents dynamically.
+                    </p>
+                
+                </div>
+            </div>
+            
+            <div class='width4'></div>
+            
+			<div class='col scrollY'>
+			
+				<!-- dynamically include listview control -->
+				<div id='listviewContainer'>
+					<script>
+						$('#listviewContainer').load('listview.html #listviewFragment');
+					</script>
+				</div>
+			</div>
+			
+			<!-- collapsible div that acts as the spacer between content columns in larger dimensions,
+				but disappears under smaller dimensions -->
+			<div class='collapsible width6'></div>
+			
+			<!-- collapses to width of child (ANY SIZE) -->
+			<div id='numpadContainer' class='shrink'>
+				<!-- dynamically include numpad control -->
+				<script>
+					$('<div>').load('numpad.html #numpadFragment', function() {
+						$('#numpadContainer').html($(this).find('#numpadFragment').html());
+					});
+				</script>
+			</div>
+			
+		</section>
+	</div>	<!-- end .fragment -->
+	
+<div class='disclaimer disclaimerMin'>
+	<h4>Note: The numpad's base font-size changes below 1024px and above 1600px. This is only done for illustration.</h4>
+</div>
+
+	<div id='portraitNotification' class='center'><h6>portrait mode - Support coming soon</h6></div>
+</body>
+</html>

@@ -1,0 +1,464 @@
+/*
+*	FONT SIZES
+*/
+/* Note: the body base font size is what specifies what "1em" is. ("font-size: 10px" -> "1em == 10px") */
+body { font-size: 10px; }
+input { font-size: 1.2em; }
+
+/*
+*	(Page title)
+*/
+h1 { font-size: 5.6em; line-height: 0.89em; margin-top: -0.16em; margin-bottom: 0.165em; }
+/*
+*	(Section headers, Grid pivots)
+*/
+h2 { font-size: 2.4em; line-height: 1.25em; margin-top: -0.33em; margin-bottom: 0.33em; }
+/*
+*	(Subheader, Entity title)
+*/
+h3 { font-size: 1.6em; line-height: 1.22em;  margin-top: -0.3em; margin-bottom: 0.35em; }
+/*
+*	(Standard page content, body text, list/row contents)
+*/
+h4 { font-size: 1.4em; line-height: 1.44em; margin-top: -0.45em; margin-bottom: 0.43em; }
+label { display: block; }
+/*
+*	(Secondary information & content)
+*/
+h5 { font-size: 1.2em; line-height: 1.7em; margin-top: -0.5em; margin-bottom: 0.45em; }
+/*
+*	(Section Titles, Column headers)
+*/
+h6 { font-size: 1.2em; text-transform: uppercase; line-height: 1.7em; margin-top: -0.5em; margin-bottom: 0.45em; }
+h1, h2, h3, h4, h5, h6 { font-weight: 100; padding: 0em; }
+
+
+/*
+*	ELEMENT RULES
+*/
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+body { 
+	min-width: 100%; 
+	width: auto; 
+	height: 100%;
+	vertical-align: top;
+}
+div {
+	/*align-self: stretch; 
+	flex: 1 1 auto;*/
+	height: auto;
+}
+label {
+	display: block;
+	flex: 1 0 auto;
+}
+input { /* same font-size as <h4> (standard body font) */
+	line-height: 0.8em;
+	padding: 0.6em;
+	width: 100%;
+	display: block;
+}
+textarea {
+	padding: 0.6em;
+}
+p  { 
+	font-size: 1.4em; 
+	line-height: 1.42em; 
+	margin-top: -0.42em; 
+	margin-bottom: 0.52em; 
+	padding: 0em;
+}
+code {
+	font-size: 12px;
+}
+img {
+	max-width: 100%;
+}
+a {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+
+/*
+*	MAIN PAGE FRAGMENT RULES
+*/
+/* Define a grid with rows for a banner and a body */
+.fragment {
+	display: flex;
+    height: 100%;
+    width: 100%;
+	background-color: rgba(0, 0, 0, 0.15);
+	flex-flow: column nowrap;
+	justify-content: flex-start;
+	align-content: flex-start;
+	align-items: flex-start;
+	overflow: auto;
+}
+.fragment > header { /* common header */
+	padding-top: 5em;
+	padding-left: 12em;
+	align-self: flex-start;
+	width: 100%;
+	height: 14em;
+	flex: 0 0 auto;
+}
+.fragment > header h1 {
+	white-space: nowrap;
+}
+
+
+
+/*
+*	MAIN CONTENT CONTAINER RULES
+*/
+section[role=main] {
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	padding-left: 12em;
+	padding-right: 5em;	 
+}
+section[role=main].panoramic {
+	display: inline-flex;
+	align-self: stretch;
+	align-content: flex-start;
+	align-items: flex-start;
+	flex: 1 1 auto;
+	flex-flow: row nowrap; 
+	justify-content: flex-start; 
+}
+section[role=main].col {
+	align-self: stretch;
+	align-content: flex-start;
+	align-items: flex-start;
+	display: flex;
+	flex: 1 1 auto;
+	flex-flow: row nowrap; 
+	justify-content: flex-start; 
+	flex-flow: column nowrap;
+}
+section[role=main].colReverse {
+	align-self: stretch;
+	align-content: flex-start;
+	align-items: flex-start;
+	display: flex;
+	flex: 1 1 auto;
+	flex-flow: row nowrap; 
+	justify-content: flex-start; 
+	flex-flow: column-reverse nowrap;
+}
+section[role=main].colWrap {
+	align-self: stretch;
+	align-content: flex-start;
+	align-items: flex-start;
+	display: flex;
+	flex: 1 1 auto;
+	flex-flow: row nowrap; 
+	justify-content: flex-start; 
+	flex-flow: column wrap;
+}
+section[role=main].colWrapReverse {
+	align-self: stretch;
+	align-content: flex-start;
+	align-items: flex-start;
+	display: flex;
+	flex: 1 1 auto;
+	flex-flow: row nowrap; 
+	justify-content: flex-start; 
+	flex-flow: column-reverse wrap;
+}
+section[role=main].row {
+	align-self: stretch;
+	align-content: flex-start;
+	align-items: flex-start;
+	display: flex;
+	flex: 1 1 auto;
+	flex-flow: row nowrap; 
+	justify-content: flex-start; 
+	width: 100%;
+	flex-flow: row nowrap;
+}
+section[role=main].rowWrap {
+	align-self: stretch;
+	align-content: flex-start;
+	align-items: flex-start;
+	display: flex;
+	flex: 1 1 auto;
+	flex-flow: row nowrap; 
+	justify-content: flex-start; 
+	width: 100%;
+	flex-flow: row wrap;
+}
+section[role=main].rowReverse {
+	align-self: stretch;
+	align-content: flex-start;
+	align-items: flex-start;
+	display: flex;
+	flex: 1 1 auto;
+	flex-flow: row nowrap; 
+	justify-content: flex-start; 
+	flex-flow: row-reverse nowrap;
+}
+section[role=main].rowWrapReverse {
+	align-self: stretch;
+	align-content: flex-start;
+	align-items: flex-start;
+	display: flex;
+	flex: 1 1 auto;
+	flex-flow: row nowrap; 
+	justify-content: flex-start; 
+	flex-flow: row-reverse wrap;
+}
+
+
+
+/*
+*	ROW RULES
+*/
+.row { 
+	display: flex; 
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: flex-start; 
+	align-content: flex-start; 
+	align-items: flex-start;
+	align-self: stretch;
+	flex: 1 0 auto;
+	overflow: auto;
+}
+/*.row > div:not(.col) {
+	flex: 1 1 50%;
+}*/
+
+
+/*
+*	COLUMN RULES
+*/
+.col { 
+	display: flex; 
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: flex-start; 
+	align-content: flex-start;
+	align-items: stretch;
+	align-self: stretch;  /*to-do:  stretch causes unintended wrapping with listview...it has to do with scrollY */
+	height: auto;
+	flex: 1 1;t
+}
+/*.col > div {
+	flex: 1 1 auto;
+}*/
+
+/*
+*	WRAP CONTENTS OF ROW OR COLUMN
+*/
+.wrap {
+	flex-wrap: wrap !important;
+	align-items: flex-start;
+}
+.nowrap {
+	flex-wrap: nowrap !important;
+	align-items: flex-start;
+}
+
+/*
+*	GRID LAYOUT RULES
+*/
+.grid { 
+	display: flex; 
+	flex-flow: row nowrap;
+	justify-content: flex-start; 
+	align-content: flex-start; 
+	align-items: flex-start;
+	align-self: stretch;
+	flex: 1 1 auto;
+	overflow-y: hidden;
+}
+.grid > div {
+	display: flex;
+	flex-flow: column wrap;
+	align-content: flex-start;
+	align-items: flex-start;
+	justify-content: flext-start;
+	align-self: stretch;
+	flex: 1 1 auto;
+	max-height: 100%;
+}
+
+
+/*
+*	PANORAMIC LAYOUT RULES
+*/
+.panoramic { 
+	display: inline-flex; 
+	flex-flow: row nowrap;
+	justify-content: flex-start; 
+	align-content: flex-start; 
+}
+
+/*
+*	BOX
+*/
+.box {
+	display: box;
+}
+.box > div {
+	box-flex: 1;
+	width: 0;
+}
+
+/*
+*	CENTER LAYOUT RULES (HORIZONTAL / VERTICAL CENTERING)
+*/
+.center {
+	display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+	flex: 1 1 auto;
+	height: 100%;
+	width: 100%;
+}
+.center > div {
+	align-self: auto;
+}
+
+
+/*
+*	SHRINK & STRETCH
+*/
+.shrink { 
+	display: flex;
+    flex: 0 1 auto !important;
+	flex-flow: column nowrap;
+}
+.shrinkX {
+	display: flex;
+	
+}
+.shrinkY {
+	display: flex;
+	flex: 0 1 auto !important;
+}
+
+.stretch {
+	height: 100%;
+	width: 100%;
+	align-self: stretch;
+}
+.stretchX {
+	width: 100%;
+	flex: 0 1 auto !important;
+}
+.stretchY {
+	height: 100%;
+	align-self: flex-start;
+}
+
+
+
+/*
+*	UTILITY CLASSES
+*/
+.pad {
+	padding: 1em;
+}
+.margin {
+	margin: 1em;
+}
+
+.scroll { 
+	overflow-x: auto; 
+	overflow-y: auto; 
+}
+.scrollY { 
+	overflow-y: auto;
+}
+.scrollX { 
+	overflow-x: auto;
+}
+
+
+.hide { display: none; }
+
+.textLeft { text-align: left; }
+.textRight { text-align: right; }
+.textCenter { text-align: center; }
+.textJustify { text-align: justify; }
+
+
+.ratio h1, .ratio1 h1, .ratio2 h1, .ratio3 h1, .ratio4 h1, .ratio5 h1,
+.ratio h3, .ratio1 h3, .ratio2 h3, .ratio3 h3, .ratio4 h3, .ratio5 h3,
+.ratio h4, .ratio1 h4, .ratio2 h4, .ratio3 h4, .ratio4 h4, .ratio5 h4 {
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+.ratio {
+	flex: 1 1 auto !important;
+	overflow: hidden;
+}
+.ratio1 {
+	max-width: 10%;
+	min-width: 10%;
+	overflow: hidden;
+}
+.ratio2 {
+	max-width: 20%;
+	min-width: 20%;
+	overflow: hidden;
+}
+.ratio3 {
+	max-width: 30%;
+	min-width: 30%;
+	overflow: hidden;
+}
+.ratio4 {
+	max-width: 40%;
+	min-width: 40%;
+	overflow: hidden;
+}
+.ratio5 {
+	max-width: 50%;
+	min-width: 50%;
+	overflow: hidden;
+}
+.hide {
+	display: none !important;
+}
+
+@media (min-width : 1025px) {
+	.fragment {
+		color: #000000;
+	}
+	.collapsible { /* intentionally empty */ }
+}
+/* screen width under 1024px (portrait) */
+@media (max-width: 1024px) {
+	body {
+		color: #c03;
+	}
+    .collapsible {
+        display: none !important;
+    }
+	
+	section[role=main].panoramic, section[role=main].row {
+		overflow-y: auto;
+		overflow-x: hidden;
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		margin-bottom: 12em;
+		height: auto;
+		align-self: auto;
+	}
+}
+
+.noScroll {
+	overflow: hidden;
+	overflow-x: hidden;
+	overflow-y: hidden;
+}

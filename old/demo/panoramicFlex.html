@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="js/jquery-1.11.0.min.js"></script>
+	<script src="js/main.js"></script>
+</head>
+<body>
+	<div id='loadingScreen' style='height: 100%; width: 100%; background: #000 url(images/loading.gif) no-repeat; 
+		background-position: center; background-size: 50px 50px; position: fixed; top: 0px; left: 0px;'></div>	
+	
+	<div id='pageInfo' class='col pad1'>
+	</div>
+	
+	<!-- customer details -->
+	<div class='fragment'>
+		
+		<header><h1>Panoramic with Flex</h1></header>
+		
+		<section role='main' class='panoramic'>
+			<!-- explanation -->
+			<div class='col width40 marginRight6 pad1'>
+				<h2>Introduction</h2>
+				<p>
+					A panoramic view is one that is unbroken and extensive, as of a landscape. In the newest
+					apps, this is a common layout, which involves positioning page elements
+					in multiple columns, with horizontal scrolling to handle overflow.
+				</p>
+				
+				<hr />
+				<h3>How to use:</h3>
+				<p>The important detail is to use <strong><code>minWidth{N}</code></strong> classes on
+				each column. Otherwise, the columns will not be able to extend past the width of the
+				viewport (they will simply flex to fit within it). A min width ensures the columns will 
+				be at least at a width that would enable the panorama to work.
+				<p>It's still really easy to implement:
+<pre class='prettyprint lang-html'>
+<code>
+    &lt;section role='main' class='panoramic'&gt;
+	
+        &lt;!-- min width of 10GU --&gt;
+        &lt;div class='col minWidth10'&gt;Column 1&lt/div&gt;
+		
+        ... columns with minWidth{N} as desired...
+
+        &lt;!-- min width of 10GU --&gt;
+        &lt;div class='col minWidth20'&gt;Column N&lt/div&gt;
+		
+    &lt;/section&gt;
+</code>
+</pre>
+				</p>
+
+				<hr />
+				<h3>Panoramic meets Portrait</h3>
+				
+				<p>
+				</p>
+				<p>
+					<a href='panoramicPortrait.html'>Panoramic goes Portrait &rarr;</a>
+				</p>
+			</div>
+			
+			<!-- Handles N columns with M possible widths -->
+			<div class='col minWidth10 marginRight6 pad1'><p>min width 10 grid units (100px)</p></div>
+			<div class='col minWidth12 marginRight6 pad1'><p>min width 12 grid units (120px)</p></div>
+			<div class='col minWidth14 marginRight6 pad1'><p>min width 14 grid units (140px)</p></div>
+			<div class='col minWidth16 marginRight6 pad1'><p>min width 16 grid units (160px)</p></div>
+			<div class='col minWidth18 marginRight6 pad1'><p>min width 18 grid units (180px)</p></div>
+			<div class='col minWidth20 marginRight6 pad1'><p>min width 20 grid units (200px)</p></div>
+			
+			<!-- ghost node -->
+			<div class='col width0'></div>
+		</section>
+		
+	</div>	<!-- end .fragment -->
+	
+<div id='portraitNotification' class='center'><h6>portrait mode - Support coming soon</h6></div>
+</body>
+</html>

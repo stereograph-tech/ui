@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="js/jquery-1.11.0.min.js"></script>
+	<script src="js/main.js"></script>
+</head>
+<body>
+
+	<div id='loadingScreen' style='height: 100%; width: 100%; background: #000 url(images/loading.gif) no-repeat; 
+		background-position: center; background-size: 50px 50px; position: fixed; top: 0px; left: 0px;'></div>	
+	
+	<div id='pageInfo' class='col pad1'>
+	</div>
+	
+	<!-- customer details -->
+	<div class='fragment'>
+		<!-- common header -->
+		<header><h1>Listview (single-line)</h1></header>
+		
+		<section role='main' class='row'>
+            
+            <div class='col width50 pad scrollY'>                
+                <div>
+                    <h2>Introduction</h2>
+                    <p>
+                        The list view (part of the <strong><code>.standardGrid</code></strong> class)
+                        will be contained in <em>StandardGrid.css</em> and is still in progress.
+                        There are some core concepts to understand, however, when implementing a listview.
+                    </p>
+                </div>
+                
+                
+                <div class='marginTop2'>
+                <hr />
+                <h2>Example</h2>
+<pre class='prettyprint lang-html'>
+<code>
+
+    &lt;section role=&quot;main&quot; class=&quot;row&quot;&gt;
+        
+        &lt;div class=&quot;col&quot;&gt;
+        
+            &lt;!-- in a list-view only page, you simply need a 
+                single div tag with a &quot;.col&quot; class applied.
+                You include your listview inside of this column as
+                usual. Meaning, you can define your listview
+                in a separate file, and dynamically include it. --&gt;
+                
+            &lt;div class=&quot;listview&quot;&gt;
+                &lt;header class=&quot;row height3&quot;&gt;
+                    &lt;div class=&quot;ratio2 pad&quot;&gt;&lt;h6&gt;COL HEADER&lt;/h6&gt;&lt;/div&gt;
+                    &lt;div class=&quot;ratio pad&quot;&gt;&lt;h6&gt;COL HEADER&lt;/h6&gt;&lt;/div&gt;
+                    &lt;div class=&quot;ratio pad&quot;&gt;&lt;h6&gt;COL HEADER&lt;/h6&gt;&lt;/div&gt;
+                    &lt;div class=&quot;ratio pad&quot;&gt;&lt;h6&gt;COL HEADER&lt;/h6&gt;&lt;/div&gt;
+                    &lt;div class=&quot;ratio2 pad&quot;&gt;&lt;h6&gt;COL HEADER&lt;/h6&gt;&lt;/div&gt;
+                &lt;/header&gt;
+                &lt;div class=&quot;row height4&quot;&gt;
+                    &lt;div class=&quot;ratio2&quot;&gt;&lt;h4&gt;contents&lt;/h4&gt;&lt;/div&gt;
+                    &lt;div class=&quot;ratio pad&quot;&gt;&lt;h4&gt;contents&lt;/h4&gt;&lt;/div&gt;
+                    &lt;div class=&quot;ratio pad&quot;&gt;&lt;h4&gt;contents&lt;/h4&gt;&lt;/div&gt;
+                    &lt;div class=&quot;ratio pad&quot;&gt;&lt;h4&gt;contents&lt;/h4&gt;&lt;/div&gt;
+                    &lt;div class=&quot;ratio2 pad&quot;&gt;&lt;h4&gt;contents &lt;/h4&gt;&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            
+        &lt;/div&gt;
+        
+    &lt;/section&gt;
+    
+</code>
+</pre>
+                </div>
+                
+                
+                <div>
+                    <hr />
+                    <h2>Core Concepts</h2>
+                    
+                    <h3>The <em><code>.ratio{N}</code></em> class</h3>
+                    <p>
+                        <strong><code>.ratio{N}</code></strong> classes determine the horizontal stretch factor of each column in a listview.
+                        A <strong><code>.ratio3</code></strong> class will stretch a column to 30% of the width of the listview,
+                        <strong><code>.ratio5</code></strong> will stretch to 50% of the width of the listview, and so on. <strong><code>.ratio</code></strong>
+                        by itself (with no number), will cause the column to stretch to exactly 1 fraction of the available width. Mathematically, if 5 
+                        columns are in a listview, each with a <strong><code>.ratio</code></strong> class, then each column will calculate to be 20% wide. Since
+                        there is usually a mixture of different ratios within a listview, the fixed-size ratios are calculated first, subtracted from the 100%,
+                        and the remainder width is then divided evenly by any columns with the basic <strong><code>ratio</code></strong> class applied.
+                    </p>
+                    
+                    <h3 class='marginTop1'>Defining a listview</h3>
+                    <p>
+                        You only need to define a single header row and 1 single content row. A data-binding loop will take care of inserting the remaining rows at
+                        runtime.
+                    </p>
+                </div>                
+            </div>
+            
+            <!-- gutter -->
+            <div class='width4'></div>
+            
+			<div id='listviewFragment' class='col'>
+				
+				<div class='listview'>
+					<header class='row height3'>
+						<div class='ratio2 pad1'><h6>COL HEADER</h6></div>
+						<div class='ratio pad1'><h6>COL HEADER</h6></div>
+						<div class='ratio pad1'><h6>COL HEADER</h6></div>
+						<div class='ratio pad1'><h6>COL HEADER</h6></div>
+						<div class='ratio2 collapsible pad1'><h6>COL HEADER</h6></div>
+					</header>
+					<div class='row height4'>
+						<div class='ratio2'><h4>contents and contents and contents and more contents and even more contents</h4></div>
+						<div class='ratio pad1'><h4>contents</h4></div>
+						<div class='ratio pad1'><h4>contents</h4></div>
+						<div class='ratio pad1'><h4>contents</h4></div>
+						<div class='ratio2 collapsible pad1'><h4>contents and contents and contents and more contents and even more contents</h4></div>
+					</div>
+					<div class='row height4'>
+						<div class='ratio2 pad1'><h4>contents and contents and contents and more contents and even more contents</h4></div>
+						<div class='ratio pad1'><h4>contents</h4></div>
+						<div class='ratio pad1'><h4>contents</h4></div>
+						<div class='ratio pad1'><h4>contents</h4></div>
+						<div class='ratio2 collapsible pad1'><h4>contents and contents and contents and more contents and even more contents</h4></div>
+					</div>
+					<div class='row height4'>
+						<div class='ratio2 pad1'><h4>contents and contents and contents and more contents and even more contents</h4></div>
+						<div class='ratio pad1'><h4>contents</h4></div>
+						<div class='ratio pad1'><h4>contents</h4></div>
+						<div class='ratio pad1'><h4>contents</h4></div>
+						<div class='ratio2 collapsible pad1'><h4>contents and contents and contents and more contents and even more contents</h4></div>
+					</div>
+					<div class='row height4'>
+						<div class='ratio2 pad1'><h4>contents and contents and contents and more contents and even more contents</h4></div>
+						<div class='ratio pad1'><h4>contents</h4></div>
+						<div class='ratio pad1'><h4>contents</h4></div>
+						<div class='ratio pad1'><h4>contents</h4></div>
+						<div class='ratio2 collapsible pad1'><h4>contents and contents and contents and more contents and even more contents</h4></div>
+					</div>
+					<div class='row height4'>
+						<div class='ratio2 pad1'><h4>contents and contents and contents and more contents and even more contents</h4></div>
+						<div class='ratio pad1'><h4>contents</h4></div>
+						<div class='ratio pad1'><h4>contents</h4></div>
+						<div class='ratio pad1'><h4>contents</h4></div>
+						<div class='ratio2 collapsible pad1'><h4>contents and contents and contents and more contents and even more contents</h4></div>
+					</div>
+					<div class='row height4'>
+						<div class='ratio2 pad1'><h4>contents and contents and contents and more contents and even more contents</h4></div>
+						<div class='ratio pad1'><h4>contents</h4></div>
+						<div class='ratio pad1'><h4>contents</h4></div>
+						<div class='ratio pad1'><h4>contents</h4></div>
+						<div class='ratio2 collapsible pad1'><h4>contents and contents and contents and more contents and even more contents</h4></div>
+					</div>
+					<div class='row height4'>
+						<div class='ratio2 pad1'><h4>contents and contents and contents and more contents and even more contents</h4></div>
+						<div class='ratio pad1'><h4>contents</h4></div>
+						<div class='ratio pad1'><h4>contents</h4></div>
+						<div class='ratio pad1'><h4>contents</h4></div>
+						<div class='ratio2 collapsible pad1'><h4>contents and contents and contents and more contents and even more contents</h4></div>
+					</div>
+					<div class='row height4'>
+						<div class='ratio2 pad1'><h4>contents and contents and contents and more contents and even more contents</h4></div>
+						<div class='ratio pad1'><h4>contents</h4></div>
+						<div class='ratio pad1'><h4>contents</h4></div>
+						<div class='ratio pad1'><h4>contents</h4></div>
+						<div class='ratio2 collapsible pad1'><h4>contents and contents and contents and more contents and even more contents</h4></div>
+					</div>
+					<div class='row height4'>
+						<div class='ratio2 pad1'><h4>contents and contents and contents and more contents and even more contents</h4></div>
+						<div class='ratio pad1'><h4>contents</h4></div>
+						<div class='ratio pad1'><h4>contents</h4></div>
+						<div class='ratio pad1'><h4>contents</h4></div>
+						<div class='ratio2 collapsible pad1'><h4>contents and contents and contents and more contents and even more contents</h4></div>
+					</div>
+					<div class='row height4'>
+						<div class='ratio2 pad1'><h4>contents and contents and contents and more contents and even more contents</h4></div>
+						<div class='ratio pad1'><h4>contents</h4></div>
+						<div class='ratio pad1'><h4>contents</h4></div>
+						<div class='ratio pad1'><h4>contents</h4></div>
+						<div class='ratio2 collapsible pad1'><h4>contents and contents and contents and more contents and even more contents</h4></div>
+					</div>
+					<div class='row height4'>
+						<div class='ratio2 pad1'><h4>contents and contents and contents and more contents and even more contents</h4></div>
+						<div class='ratio pad1'><h4>contents</h4></div>
+						<div class='ratio pad1'><h4>contents</h4></div>
+						<div class='ratio pad1'><h4>contents</h4></div>
+						<div class='ratio2 collapsible pad1'><h4>contents and contents and contents and more contents and even more contents</h4></div>
+					</div>
+					<div class='row height4'>
+						<div class='ratio2 pad1'><h4>contents and contents and contents and more contents and even more contents</h4></div>
+						<div class='ratio pad1'><h4>contents</h4></div>
+						<div class='ratio pad1'><h4>contents</h4></div>
+						<div class='ratio pad1'><h4>contents</h4></div>
+						<div class='ratio2 collapsible pad1'><h4>contents and contents and contents and more contents and even more contents</h4></div>
+					</div>
+					<div class='row height4'>
+						<div class='ratio2 pad1'><h4>contents and contents and contents and more contents and even more contents</h4></div>
+						<div class='ratio pad1'><h4>contents</h4></div>
+						<div class='ratio pad1'><h4>contents</h4></div>
+						<div class='ratio pad1'><h4>contents</h4></div>
+						<div class='ratio2 collapsible pad1'><h4>contents and contents and contents and more contents and even more contents</h4></div>
+					</div>
+					<div class='row height4'>
+						<div class='ratio2 pad1'><h4>contents and contents and contents and more contents and even more contents</h4></div>
+						<div class='ratio pad1'><h4>contents</h4></div>
+						<div class='ratio pad1'><h4>contents</h4></div>
+						<div class='ratio pad1'><h4>contents</h4></div>
+						<div class='ratio2 collapsible pad1'><h4>contents and contents and contents and more contents and even more contents</h4></div>
+					</div>
+					<div class='row height4'>
+						<div class='ratio2 pad1'><h4>contents and contents and contents and more contents and even more contents</h4></div>
+						<div class='ratio pad1'><h4>contents</h4></div>
+						<div class='ratio pad1'><h4>contents</h4></div>
+						<div class='ratio pad1'><h4>contents</h4></div>
+						<div class='ratio2 collapsible pad1'><h4>contents and contents and contents and more contents and even more contents</h4></div>
+					</div>
+					<div class='row height4'>
+						<div class='ratio2 pad1'><h4>contents and contents and contents and more contents and even more contents</h4></div>
+						<div class='ratio pad1'><h4>contents</h4></div>
+						<div class='ratio pad1'><h4>contents</h4></div>
+						<div class='ratio pad1'><h4>contents</h4></div>
+						<div class='ratio2 collapsible pad1'><h4>contents and contents and contents and more contents and even more contents</h4></div>
+					</div>
+					<div class='row height4'>
+						<div class='ratio2 pad1'><h4>contents and contents and contents and more contents and even more contents</h4></div>
+						<div class='ratio pad1'><h4>contents</h4></div>
+						<div class='ratio pad1'><h4>contents</h4></div>
+						<div class='ratio pad1'><h4>contents</h4></div>
+						<div class='ratio2 collapsible pad1'><h4>contents and contents and contents and more contents and even more contents</h4></div>
+					</div>
+					<div class='row height4'>
+						<div class='ratio2 pad1'><h4>contents and contents and contents and more contents and even more contents</h4></div>
+						<div class='ratio pad1'><h4>contents</h4></div>
+						<div class='ratio pad1'><h4>contents</h4></div>
+						<div class='ratio pad1'><h4>contents</h4></div>
+						<div class='ratio2 collapsible pad1'><h4>contents and contents and contents and more contents and even more contents</h4></div>
+					</div>
+				</div>			
+				
+			</div>
+		</section>
+	</div>	<!-- end .fragment -->
+	
+	<div id='portraitNotification' class='center'><h6>portrait mode - Support coming soon</h6></div>
+</body>
+</html>

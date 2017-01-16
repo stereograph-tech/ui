@@ -1,0 +1,150 @@
+/**
+*
+* .font-size
+* Allows for dynamic setting of font size.
+*
+*/
+.font-size-0.5 { font-size: 0.5em; }
+.font-size-0.6 { font-size: 0.6em; }
+.font-size-0.7 { font-size: 0.7em; }
+.font-size-0.8 { font-size: 0.8em; }
+.font-size-0.9 { font-size: 0.9em; }
+.font-size-1 { font-size: 1em; }
+.font-size-1.1 { font-size: 1.1em; }
+.font-size-1.2 { font-size: 1.2em; }
+.font-size-1.3 { font-size: 1.3em; }
+.font-size-1.4 { font-size: 1.4em; }
+.font-size-1.5 { font-size: 1.5em; }
+.font-size-1.6 { font-size: 1.6em; }
+.font-size-1.7 { font-size: 1.7em; }
+.font-size-1.8 { font-size: 1.8em; }
+.font-size-1.9 { font-size: 1.9em; }
+.font-size-2 { font-size: 2em; }
+.font-size-2.1 { font-size: 2.1em; }
+.font-size-2.2 { font-size: 2.2em; }
+.font-size-2.3 { font-size: 2.3em; }
+.font-size-2.4 { font-size: 2.4em; }
+.font-size-2.5 { font-size: 2.5em; }
+.font-size-2.6 { font-size: 2.6em; }
+.font-size-2.7 { font-size: 2.7em; }
+.font-size-2.8 { font-size: 2.8em; }
+.font-size-2.9 { font-size: 2.9em; }
+.font-size-3 { font-size: 3em; }
+
+/**
+*
+* .width
+* Allows for precise setting of element width.
+*
+*/
+.width-01 { max-width: 0.1em !important; min-width: 0.1em !important; }
+.width-02 { max-width: 0.2em !important; min-width: 0.2em !important; }
+.width-03 { max-width: 0.3em !important; min-width: 0.3em !important; }
+.width-04 { max-width: 0.4em !important; min-width: 0.4em !important; }
+.width-05 { max-width: 0.5em !important; min-width: 0.5em !important; }
+.width-06 { max-width: 0.6em !important; min-width: 0.6em !important; }
+.width-07 { max-width: 0.7em !important; min-width: 0.7em !important; }
+.width-08 { max-width: 0.8em !important; min-width: 0.8em !important; }
+.width-09 { max-width: 0.9em !important; min-width: 0.9em !important; }
+.width-0 { max-width: 0em !important; min-width: 0em !important; }
+.width-1 { max-width: 1em !important; min-width: 1em !important; }
+.width-2 { max-width: 2em !important; min-width: 2em !important; }
+.width-3 { max-width: 3em !important; min-width: 3em !important; }
+.width-4 { max-width: 4em !important; min-width: 4em !important; }
+.width-5 { max-width: 5em !important; min-width: 5em !important; }
+.width-6 { max-width: 6em !important; min-width: 6em !important; }
+.width-7 { max-width: 7em !important; min-width: 7em !important; }
+.width-8 { max-width: 8em !important; min-width: 8em !important; }
+.width-9 { max-width: 9em !important; min-width: 9em !important; }
+.width-10 { max-width: 10em !important; min-width: 10em !important; }
+.width-11 { max-width: 11em !important; min-width: 11em !important; }
+.width-12 { max-width: 12em !important; min-width: 12em !important; }
+.width-13 { max-width: 13em !important; min-width: 13em !important; }
+.width-14 { max-width: 14em !important; min-width: 14em !important; }
+.width-15 { max-width: 15em !important; min-width: 15em !important; }
+.width-16 { max-width: 16em !important; min-width: 16em !important; }
+.width-17 { max-width: 17em !important; min-width: 17em !important; }
+.width-18 { max-width: 18em !important; min-width: 18em !important; }
+.width-19 { max-width: 19em !important; min-width: 19em !important; }
+.width-20 { max-width: 20em !important; min-width: 20em !important; }
+.width-21 { max-width: 21em !important; min-width: 21em !important; }
+.width-22 { max-width: 22em !important; min-width: 22em !important; }
+.width-23 { max-width: 23em !important; min-width: 23em !important; }
+.width-24 { max-width: 24em !important; min-width: 24em !important; }
+.width-25 { max-width: 25em !important; min-width: 25em !important; }
+.width-26 { max-width: 26em !important; min-width: 26em !important; }
+.width-27 { max-width: 27em !important; min-width: 27em !important; }
+.width-28 { max-width: 28em !important; min-width: 28em !important; }
+.width-29 { max-width: 29em !important; min-width: 29em !important; }
+.width-30 { max-width: 30em !important; min-width: 30em !important; }
+.width-31 { max-width: 31em !important; min-width: 31em !important; }
+.width-32 { max-width: 32em !important; min-width: 32em !important; }
+.width-33 { max-width: 33em !important; min-width: 33em !important; }
+.width-34 { max-width: 34em !important; min-width: 34em !important; }
+.width-35 { max-width: 35em !important; min-width: 35em !important; }
+.width-36 { max-width: 36em !important; min-width: 36em !important; }
+.width-37 { max-width: 37em !important; min-width: 37em !important; }
+.width-38 { max-width: 38em !important; min-width: 38em !important; }
+.width-39 { max-width: 39em !important; min-width: 39em !important; }
+.width-40 { max-width: 40em !important; min-width: 40em !important; }
+.width-41 { max-width: 41em !important; min-width: 41em !important; }
+.width-42 { max-width: 42em !important; min-width: 42em !important; }
+.width-43 { max-width: 43em !important; min-width: 43em !important; }
+.width-44 { max-width: 44em !important; min-width: 44em !important; }
+.width-45 { max-width: 45em !important; min-width: 45em !important; }
+.width-46 { max-width: 46em !important; min-width: 46em !important; }
+.width-47 { max-width: 47em !important; min-width: 47em !important; }
+.width-48 { max-width: 48em !important; min-width: 48em !important; }
+.width-49 { max-width: 49em !important; min-width: 49em !important; }
+.width-50 { max-width: 50em !important; min-width: 50em !important; }
+.width-51 { max-width: 51em !important; min-width: 51em !important; }
+.width-52 { max-width: 52em !important; min-width: 52em !important; }
+.width-53 { max-width: 53em !important; min-width: 53em !important; }
+.width-54 { max-width: 54em !important; min-width: 54em !important; }
+.width-55 { max-width: 55em !important; min-width: 55em !important; }
+.width-56 { max-width: 56em !important; min-width: 56em !important; }
+.width-57 { max-width: 57em !important; min-width: 57em !important; }
+.width-58 { max-width: 58em !important; min-width: 58em !important; }
+.width-59 { max-width: 59em !important; min-width: 59em !important; }
+.width-60 { max-width: 60em !important; min-width: 60em !important; }
+.width-61 { max-width: 61em !important; min-width: 61em !important; }
+.width-62 { max-width: 62em !important; min-width: 62em !important; }
+.width-63 { max-width: 63em !important; min-width: 63em !important; }
+.width-64 { max-width: 64em !important; min-width: 64em !important; }
+.width-65 { max-width: 65em !important; min-width: 65em !important; }
+.width-66 { max-width: 66em !important; min-width: 66em !important; }
+.width-67 { max-width: 67em !important; min-width: 67em !important; }
+.width-68 { max-width: 68em !important; min-width: 68em !important; }
+.width-69 { max-width: 69em !important; min-width: 69em !important; }
+.width-70 { max-width: 70em !important; min-width: 70em !important; }
+.width-71 { max-width: 71em !important; min-width: 71em !important; }
+.width-72 { max-width: 72em !important; min-width: 72em !important; }
+.width-73 { max-width: 73em !important; min-width: 73em !important; }
+.width-74 { max-width: 74em !important; min-width: 74em !important; }
+.width-75 { max-width: 75em !important; min-width: 75em !important; }
+.width-76 { max-width: 76em !important; min-width: 76em !important; }
+.width-77 { max-width: 77em !important; min-width: 77em !important; }
+.width-78 { max-width: 78em !important; min-width: 78em !important; }
+.width-79 { max-width: 79em !important; min-width: 79em !important; }
+.width-80 { max-width: 80em !important; min-width: 80em !important; }
+.width-81 { max-width: 81em !important; min-width: 81em !important; }
+.width-82 { max-width: 82em !important; min-width: 82em !important; }
+.width-83 { max-width: 83em !important; min-width: 83em !important; }
+.width-84 { max-width: 84em !important; min-width: 84em !important; }
+.width-85 { max-width: 85em !important; min-width: 85em !important; }
+.width-86 { max-width: 86em !important; min-width: 86em !important; }
+.width-87 { max-width: 87em !important; min-width: 87em !important; }
+.width-88 { max-width: 88em !important; min-width: 88em !important; }
+.width-89 { max-width: 89em !important; min-width: 89em !important; }
+.width-90 { max-width: 90em !important; min-width: 90em !important; }
+.width-91 { max-width: 91em !important; min-width: 91em !important; }
+.width-92 { max-width: 92em !important; min-width: 92em !important; }
+.width-93 { max-width: 93em !important; min-width: 93em !important; }
+.width-94 { max-width: 94em !important; min-width: 94em !important; }
+.width-95 { max-width: 95em !important; min-width: 95em !important; }
+.width-96 { max-width: 96em !important; min-width: 96em !important; }
+.width-97 { max-width: 97em !important; min-width: 97em !important; }
+.width-98 { max-width: 98em !important; min-width: 98em !important; }
+.width-99 { max-width: 99em !important; min-width: 99em !important; }
+.width-100 { max-width: 100em !important; min-width: 100em !important; }
+

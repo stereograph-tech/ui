@@ -1,0 +1,90 @@
+/*
+*	LISTVIEW CONTAINER RULES
+*/
+.listview {
+}
+.listview header {
+	background-color: #000 !important;
+	color: #fff;
+}
+/* listview rows */
+.listview > div {
+	color: #fff;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.listview > div > div {  /* div immediately inside of row is the cell container */
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: flex-start;
+	align-content: flex-start;
+	align-items: center;
+	padding: 1em;
+}
+.listview > div h4 {
+	white-space: nowrap;
+}
+
+.listview .row:nth-child(even) {
+	background: url(../images/listitemBg045.png) repeat-x;
+	background-size: 100% calc(100% - 1px);
+}
+.listview .row:nth-child(odd) {
+	background: url(../images/listitemBg035.png) repeat-x;
+	background-size: 100% calc(100% - 1px);
+}
+
+/*
+*	2 LINE LISTVIEW CONTAINER RULES - MANUAL CONTENT POSITIONING
+*/
+.listviewMultiLine {
+}
+.listviewMultiLine header {
+	background-color: #000 !important;
+	color: #fff;
+}
+.listviewMultiLine header div {
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.listviewMultiLine header h6 {
+	white-space: nowrap;
+}
+.listviewMultiLine > div.row {
+	color: #fff;
+}
+.listviewMultiLine > div.row > div {
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.listviewMultiLine > div.row > div > div {
+	align-self: stretch;
+}
+.listviewMultiLine > div.row h3 {
+	white-space: nowrap;
+	align-self: stretch;
+}
+.listviewMultiLine > div.row h4 {
+	white-space: nowrap;
+	align-self: stretch;
+}
+.listviewMultiLine .row:nth-child(even) {
+	background: url(../images/listitemBg045.png) repeat-x;
+	background-size: 50% calc(100% - 1px);
+}
+.listviewMultiLine .row:nth-child(odd) {
+	background: url(../images/listitemBg035.png) repeat-x;
+	background-size: 50% calc(100% - 1px);
+}
+
+
+/*
+*	CARD VIEW CONTAINER RULES
+*/
+.cardview {
+
+}
+.cardview > div {
+	margin-right: 2em;
+	margin-bottom: 2em;
+}

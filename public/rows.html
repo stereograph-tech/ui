@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="js/jquery-1.11.0.min.js"></script>
+	<script src="js/main.js"></script>
+</head>
+<body>
+	<div id='loadingScreen' style='height: 100%; width: 100%; background: #000 url(images/loading.gif) no-repeat; 
+		background-position: center; background-size: 50px 50px; position: fixed; top: 0px; left: 0px;'></div>	
+	
+	<div id='pageInfo' class='col pad1'>
+	</div>
+		
+		<blueprint class='row coloring-on'>
+			<!-- explanation -->
+			<div class='col width40 marginRight6 pad1'>
+				<h2>Introduction</h2>
+				<p>Meet the <strong><code>.row</code></strong> class. 
+					This class converts the element into a row. Meaning, it children are laid out
+					horizontally, as in the example on the right.
+				</p>
+				
+				<hr />
+				<h3>How to use:</h3>
+				<p>In our Framework, this is really easy to implement:
+<pre class='prettyprint lang-html'>
+<code>
+    &lt;div class='row'&gt;
+
+        &lt;!-- --&gt;
+        &lt;div class='col width40'&gt;Column 1&lt/div&gt;
+		
+        ... more columns ...
+        
+        &lt;!--  --&gt;
+        &lt;div class='col width40'&gt;Column N&lt/div&gt;
+		
+    &lt;/div&gt;
+</code>
+</pre>
+				</p>
+				
+				<hr />
+				<h3>How it works</h3>
+				
+				<p>Parent elements with <strong><code>.row</code></strong> applied
+				will stretch horizontally, and each sibling row will stack vertically.
+				Their vertical height flexes to take up the available vertical space.
+				</p>
+				
+				<p>				
+				Elements inside of a row without any extra styling is pretty boring,
+				as you can see by the contents of the first row. Each example to the right
+				will get progressively more complex.
+				</p>
+				
+				<hr />
+				<h3>Context</h3>
+				
+				<p>It can be tricky to work with rows on their own at the layout level if you
+				are creating rows in the wrong context. 
+				Rows want to line things up horizontally - including themselves.
+				To get rows to stack vertically, you
+				need to place them inside of a column. Up next:
+				</p>
+				<p>
+					<a href='cols.html'>Creating columns &rarr;</a>
+				</p>
+			</div>
+			
+			<div class='col scrollY'>
+				<!-- Handles N columns with M possible widths -->
+				<div class='row marginBottom2 pad'>
+					<h3>Row 1</h3>
+					<div>
+						Child 1
+					</div>
+					<div>
+						Child 2
+					</div>
+					<div>
+						Child 3
+					</div>
+				</div>
+				<div class='row marginBottom2 pad'>
+					<h3>Row 2 (no wrapping)</h3>
+					<div class='width20'>
+						Child 1
+					</div>
+					<div class='width40'>
+						Child 2
+					</div>
+				</div>
+				<div class='row marginBottom2 pad wrap'>
+					<h3>Row 3 (with wrapping)</h3>
+					<p>As you can see, the addition of the <strong><code>.wrap</code></strong> class
+					on this row container allows wider children to wrap to a new line.
+					</p>
+					<div class='width20'>
+						Child 1 (<strong><code>.width20</code></strong>)
+					</div>
+					<div class='width40'>
+						Child 2 (<strong><code>.width40</code></strong>)
+					</div>
+					<div class='width60'>
+						Child 3 (<strong><code>.width60</code></strong>)
+					</div>
+					<div class='width80'>
+						Child 4 (<strong><code>.width80</code></strong>)
+					</div>
+				</div>
+				<div class='col pad'>
+					<h3>New column context</h3>
+					<p>Rows stretch horizontally by default.</p>
+					<a href='cols.html'>Learn more about columns &rarr;</a>
+					<div class='row marginBottom1'>row 1
+					</div>
+					<div class='row marginBottom1'>row 2
+					</div>
+					<div class='row marginBottom1'>row 3
+					</div>
+					<div class='row marginBottom1'>row 4
+					</div>
+				</div>
+			</div>
+		</blueprint>
+	
+<div id='portraitNotification' class='center'><h6>portrait mode - Support coming soon</h6></div>
+</body>
+</html>

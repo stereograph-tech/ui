@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="js/jquery-1.11.0.min.js"></script>
+	<script src="js/main.js"></script>
+</head>
+<body>
+
+	<div id='loadingScreen' style='height: 100%; width: 100%; background: #000 url(images/loading.gif) no-repeat; 
+		background-position: center; background-size: 50px 50px; position: fixed; top: 0px; left: 0px;'></div>	
+	
+	<div id='pageInfo' class='col pad1'>
+	</div>
+	
+	<!-- customer details -->
+	<div class='fragment'>
+		<!-- common header -->
+		<header><h1>Numpad</h1></header>
+		
+		<section role='main' class='row'>
+		
+			<div id='numpadFragment'>
+				
+				<div class='numpad pad shrink'>
+					<div class='height7 shrink'>
+						<h3>Number pad</h3>
+						
+						<label class='marginBottom2'>
+							<input type='text' />
+						</label>
+					</div>
+					
+					<div>
+						<div class='row marginBottom1 height7 collapsible'>
+							<div class='marginRight1 center'>
+								<h1>CE</h1>
+							</div>
+							<div class='center'>
+								<h1>C</h1>
+							</div>
+						</div>
+						<div class='row'>
+							<div class='stretch'>
+								<div class='row height8 padBottom1'>
+									<div class='ratio marginRight1 center'>
+										<h1>7</h1>
+									</div>
+									<div class='ratio marginRight1 center'>
+										<h1>8</h1>
+									</div>
+									<div class='ratio marginRight1 center'>
+										<h1>9</h1>
+									</div>
+								</div>
+								<div class='row height8 padBottom1'>
+									<div class='ratio marginRight1 center'>
+										<h1>4</h1>
+									</div>
+									<div class='ratio marginRight1 center'>
+										<h1>5</h1>
+									</div>
+									<div class='ratio marginRight1 center'>
+										<h1>6</h1>
+									</div>
+								</div>
+								<div class='row height8 padBottom1'>
+									<div class='ratio marginRight1 center'>
+										<h1>1</h1>
+									</div>
+									<div class='ratio marginRight1 center'>
+										<h1>2</h1>
+									</div>
+									<div class='ratio marginRight1 center'>
+										<h1>3</h1>
+									</div>
+								</div>
+								<div class='row height8 padBottom1'>
+									<div class='ratio marginRight1 center'>
+										<h1>0</h1>
+									</div>
+									<div class='ratio marginRight1 center'>
+										<h1>.</h1>
+									</div>
+								</div>
+							</div>
+							<div class='shrink row width7'>
+								<div class='height15 marginBottom1 center'>
+									<h1>+</h1>
+								</div>
+								<div class='height15 center'>
+									<h3>Enter</h3>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>		
+				
+			</div>
+		</section>
+	</div>	<!-- end .fragment -->
+	
+	<div id='portraitNotification' class='center'><h6>portrait mode - Support coming soon</h6></div>
+</body>
+</html>

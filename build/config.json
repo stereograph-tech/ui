@@ -1,0 +1,42 @@
+{
+	"grid": {
+		
+		"GRID_BASE": 10,
+		"GRID_UNIT": "em",
+
+		"filename": "grid.css",
+		"classes": [
+			{
+				"class-name": "font-size",
+				"description": "Allows for dynamic setting of font size.",
+				"min": 0.5,
+				"max": 3,
+				"increment": 0.1,
+				"properties": {
+					"font-size": {
+						"value": null,
+						"important": false
+					}
+				}				
+			},
+			{
+				"class-name": "width",
+				"description": "Allows for precise setting of element width.",
+				"allow-decimals": true,
+				"min": 0,
+				"max": 100,
+				"increment": 1,
+				"properties": {
+					"max-width": {
+						"value": null,
+						"important": true
+					},
+					"min-width": {
+						"value": null,
+						"important": true
+					}
+				}
+			}
+		]
+	}
+}

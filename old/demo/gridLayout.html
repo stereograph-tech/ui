@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="js/jquery-1.11.0.min.js"></script>
+	<script src="js/main.js"></script>
+</head>
+<body>
+	<div id='loadingScreen' style='height: 100%; width: 100%; background: #000 url(images/loading.gif) no-repeat; 
+	background-position: center; background-size: 50px 50px; position: fixed; top: 0px; left: 0px;'></div>
+	
+	<div id='pageInfo' class='col pad1'>
+	</div>
+	
+	<!-- customer details -->
+	<div class='fragment'>
+		
+		<header><h1>Grid Layout</h1></header>
+					
+		<section role='main' class='row'>
+        
+            <div class='col width40 pad'>
+                <div>
+                    <h2>Introduction</h2>
+                    <p>
+                        
+                    </p>
+                </div>
+                <div>
+                    <hr />
+                    <h2>Example</h2>
+<pre class='prettyprint lang-html'>
+<code>
+
+    &lt;section role=&quot;main&quot; class=&quot;row&quot;&gt;
+    
+        &lt;div class=&quot;col wrap scrollX&quot;&gt;
+            
+            &lt;!-- large cards --&gt;
+            
+        &lt;/div&gt;
+    
+    &lt;/section&gt;
+
+</code>
+</pre>
+                </div>
+                <div>
+                    <hr />
+                    <h2>Core Concepts</h2>
+                    <p>
+                        <strong><code>.col</code></strong> causes the contents of the column to
+                        render vertically.
+                    </p>
+                    <p>
+                        <strong><code>.wrap</code></strong> allows the contents of the column to
+                        wrap vertically. Since normally the contents of a column will continue to
+                        render vertically even after they overflow the height of the column, wrap
+                        causes the contents to wrap up to the top of the column in subsequent inner
+                        columns.
+                    </p>
+                    <p>
+                        <strong><code>.scrollX</code></strong> allows a horizontal scroll bar
+                        to appear (if needed), which allows the contents to overflow and stretch the width
+                        of the column to contain the large cards.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- gutter -->
+            <div class='width4'></div>
+        
+			<div class='col wrap scrollX'>
+                <div class='height20 width20 center marginRight1 marginBottom1'>
+                    <h1>1</h1>
+                </div>
+                <div class='height20 width20 center marginRight1 marginBottom1'>
+                    <h1>2</h1>
+                </div>
+                <div class='height20 width20 center marginRight1 marginBottom1'>
+                    <h1>3</h1>
+                </div>
+                <div class='height20 width20 center marginRight1 marginBottom1'>
+                    <h1>4</h1>
+                </div>
+                <div class='height20 width20 center marginRight1 marginBottom1'>
+                    <h1>5</h1>
+                </div>
+                <div class='height20 width20 center marginRight1 marginBottom1'>
+                    <h1>6</h1>
+                </div>
+                <div class='height20 width20 center marginRight1 marginBottom1'>
+                    <h1>7</h1>
+                </div>
+                <div class='height20 width20 center marginRight1 marginBottom1'>
+                    <h1>8</h1>
+                </div>
+                <div class='height20 width20 center marginRight1 marginBottom1'>
+                    <h1>9</h1>
+                </div>
+                <div class='height20 width20 center marginRight1 marginBottom1'>
+                    <h1>10</h1>
+                </div>
+                <div class='height20 width20 center marginRight1 marginBottom1'>
+                    <h1>11</h1>
+                </div>
+                <div class='height20 width20 center marginRight1 marginBottom1'>
+                    <h1>12</h1>
+                </div>
+                <div class='height20 width20 center marginRight1 marginBottom1'>
+                    <h1>13</h1>
+                </div>
+                <div class='height20 width20 center marginRight1 marginBottom1'>
+                    <h1>14</h1>
+                </div>
+			</div>
+		</section>
+		
+	</div>	<!-- end .fragment -->
+	
+<div id='portraitNotification' class='center'><h6>portrait mode - Support coming soon</h6></div>
+</body>
+</html>
