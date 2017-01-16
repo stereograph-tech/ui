@@ -1,1 +1,1 @@
-export * from 'ui';
+export { Config } from 'ui';
