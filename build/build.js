@@ -3,8 +3,8 @@ var fs = require('fs');
 function build_grid(config) {
 	var filename = `./${config['filename']}`;
 	var classes = config['classes'];
-	var GRID_BASE = config['GRID_BASE'];
-	var GRID_UNIT = config['GRID_UNIT'];
+	var GRID_BASE = config['base'];
+	var GRID_UNIT = config['unit'];
 	
 	var css = [];
 
@@ -21,7 +21,7 @@ function build_grid(config) {
 			throw new Error('Class is invalid');
 		}
 
-		var class_name 	= class_obj['class-name'];
+		var class_name 	= class_obj['name'];
 		if(!class_name) {
 			throw new Error('Class name is invalid');
 		}
@@ -39,7 +39,7 @@ function build_grid(config) {
 		var min 			= class_obj['min'];
 		var max 			= class_obj['max'];
 		var increment 		= class_obj['increment'];
-		var allow_decimals 	= class_obj['allow-decimals'];
+		var allow_decimals 	= class_obj['decimals'];
 
 		if(allow_decimals === true) {
 			var css_arr_dec = iterate_rule(0.1, 0.9, 0.1, class_name, properties, GRID_BASE, GRID_UNIT, true);
@@ -96,8 +96,12 @@ function iterate_rule(min, max, increment, class_name, properties, grid_base, gr
 		}
 		css_arr.push(`.${class_name}-${class_index} { `);
 
-		for(var property_name in properties) {
-			var property = properties[property_name];
+		for(var v = 0; v < properties.length; v++) {
+			var property = properties[v];
+			if(!property) {
+				continue;
+			}
+			var property_name = property['name']
 			var value = property['value'];
 			var important = property['important'] === true ? ' !important' : '';
 			
