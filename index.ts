@@ -1,0 +1,1 @@
+export { UIConfig } from './interfaces/ui-config.interface';
