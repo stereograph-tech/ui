@@ -1,1 +1,1 @@
-export { IUIConfig } from './interfaces/ui-config.interface';
+export * from 'ui';
