@@ -3,6 +3,7 @@
   "version": "0.0.6",
   "description": "Stereograph UI Framework: A true grid css framework.",
   "author": "Danny Bullis",
+  "typings": "index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/stereograph-tech/ui.git"
