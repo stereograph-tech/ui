@@ -1,5 +1,5 @@
-export declare module Config {
-    interface Grid {
+export interface Config {
+    grid: {
         base: number;
         unit: string;
         filename: string;
@@ -16,5 +16,5 @@ export declare module Config {
                 important: boolean;
             }[];
         }[];
-    }
+    };
 }
