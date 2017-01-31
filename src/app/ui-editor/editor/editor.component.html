@@ -1,0 +1,8 @@
+<p>
+  Editor
+</p>
+<app-code-panel></app-code-panel>
+
+<div *ngFor='let key of gridKeys' [appRenderJson]>
+	<strong>{{key}}:</strong> {{(grid | async)[key]}}
+</div>
