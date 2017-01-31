@@ -1,20 +1,6 @@
 {
   "name": "@stereograph/ui",
-  "version": "0.0.8",
-  "description": "Stereograph UI Framework: A true grid css framework.",
-  "author": "Danny Bullis",
-  "typings": "index.d.ts",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/stereograph-tech/ui.git"
-  },
-  "bugs": {
-    "url": "https://github.com/stereograph-tech/ui/issues"
-  },
-  "homepage": "https://github.com/stereograph-tech/ui#readme",
-  "main": "index.js",
-    "name": "@stereograph/ui",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Stereograph UI Framework: A true grid css framework.",
   "author": "Danny Bullis",
   "typings": "index.d.ts",
