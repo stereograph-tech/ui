@@ -1,0 +1,32 @@
+<ul *ngFor='let classConfig of classes'>
+
+	<li>
+		<details>
+			<summary><strong>Name: </strong> <input [(ngModel)]='classConfig.name' /></summary>
+			<ul>
+				<li><strong>Description: </strong> <textarea [(ngModel)]='classConfig.description'></textarea></li>
+				<li><strong>Min: </strong> <input [(ngModel)]='classConfig.min' /></li>
+				<li><strong>Max: </strong> <input [(ngModel)]='classConfig.min' /></li>
+				<li><strong>Increment: </strong> <input [(ngModel)]='classConfig.increment' /></li>
+
+				<li>
+					<details>
+						<summary><strong>Properties</strong></summary>
+						<ul *ngFor='let prop of classConfig.properties'>
+							<li>
+								<details>
+									<summary><strong>Name: </strong> <input [(ngModel)]='prop.name' /></summary>
+									<ul>
+										<li><strong>Value: </strong> <input [(ngModel)]='prop.value' /></li>
+										<li><strong>Important: </strong> <input type='checkbox' [(ngModel)]='prop.important' /></li>
+									</ul>
+								</details>
+							</li>
+						</ul>
+					</details>
+				</li>
+			</ul>
+		</details>
+	</li>
+					
+</ul>

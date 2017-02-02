@@ -1,0 +1,23 @@
+<ul *ngIf='grid'>
+	<li>
+		<strong>Base: </strong> 
+		<input [ngModel]='grid.base'
+			(ngModelChange)='updateGrid($event, "base")' />
+	</li>
+	<li>
+		<strong>Filename: </strong> 
+		<input [ngModel]='grid.filename'
+			(ngModelChange)='updateGrid($event, "filename")' />
+	</li>
+	<li>
+		<strong>Unit: </strong> 
+		<input [ngModel]='grid.unit'
+			(ngModelChange)='updateGrid($event, "unit")' />
+	</li>
+	<li>
+		<details>
+			<summary><strong>Classes</strong></summary>
+			<app-class-config [classes]='grid.classes'></app-class-config>
+		</details>
+	</li>
+</ul>
