@@ -1,0 +1,12 @@
+:host {
+	background-color: #eee;
+}
+:host >>> .json-rendered {
+	font-family: 'courier new', courier;
+	font-size: 0.9em;
+}
+
+:host >>> .json-bracket,
+:host >>> .json-key {
+	font-weight: bold;
+};

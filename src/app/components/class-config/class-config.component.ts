@@ -1,19 +1,28 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, OnChanges, Input } from '@angular/core';
 import { GridConfig, ClassConfig } from '../../models/ui';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'app-class-config',
   templateUrl: './class-config.component.html',
   styleUrls: ['./class-config.component.css']
 })
-export class ClassConfigComponent implements OnInit {
+export class ClassConfigComponent implements OnInit, OnChanges {
 
-	@Input() classes: ClassConfig[];
+	@Input() grid: Observable<GridConfig>;
+	classes: ClassConfig[];
 
   constructor() { }
 
   ngOnInit() {
-  	console.log('classes: ', this.classes);
+  	this.grid.subscribe((grid: GridConfig) => {
+  		if(grid && grid.classes) {
+  			this.classes = grid.classes;
+  		}
+  	});
   }
 
+  ngOnChanges(changes: any) {
+  	console.log('changes: ', changes);
+  }
 }

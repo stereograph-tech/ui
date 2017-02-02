@@ -25,11 +25,11 @@ export class UiService {
     return this._api.get<UI>('http://localhost:3000/config')
       .flatMap((config: UI) => {
         this._config.next(config);
-        console.log('config: ', this._config.getValue());
+        //console.log('config: ', this._config.getValue());
 
         if(config && config.grid) {
           this._grid.next(config.grid);
-          console.log('grid: ', this._grid.getValue());
+          //console.log('grid: ', this._grid.getValue());
         }
         return this.config;
       });
@@ -39,7 +39,7 @@ export class UiService {
     let g = this._grid.getValue();
     g[propertyName] = $event;
     this._grid.next(g);
-    console.log('update: ', $event, propertyName);
+    //console.log('update: ', $event, propertyName);
   }
 
 }

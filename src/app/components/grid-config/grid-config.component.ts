@@ -11,15 +11,10 @@ import { UiService } from '../../services/ui.service';
 })
 export class GridConfigComponent implements OnInit {
 
-	grid: GridConfig;
-
-  constructor(@Inject(UiService) private _uiService: UiService) { }
+  constructor(@Inject(UiService) private _uiService: UiService) {
+  }
 
   ngOnInit() {
-  	this._uiService.grid.subscribe((grid: GridConfig) => {
-  		console.log('update to grid-config: ', grid);
-  		this.grid = grid;
-  	});
   }
 
   updateGrid($event: any, propertyName: string) {

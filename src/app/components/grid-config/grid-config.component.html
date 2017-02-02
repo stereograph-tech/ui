@@ -1,23 +1,23 @@
-<ul *ngIf='grid'>
+<ul *ngIf='_uiService.grid | async'>
 	<li>
 		<strong>Base: </strong> 
-		<input [ngModel]='grid.base'
+		<input [ngModel]='(_uiService.grid | async)?.base'
 			(ngModelChange)='updateGrid($event, "base")' />
 	</li>
 	<li>
 		<strong>Filename: </strong> 
-		<input [ngModel]='grid.filename'
+		<input [ngModel]='(_uiService.grid | async)?.filename'
 			(ngModelChange)='updateGrid($event, "filename")' />
 	</li>
 	<li>
 		<strong>Unit: </strong> 
-		<input [ngModel]='grid.unit'
+		<input [ngModel]='(_uiService.grid | async)?.unit'
 			(ngModelChange)='updateGrid($event, "unit")' />
 	</li>
 	<li>
-		<details>
+		<details open>
 			<summary><strong>Classes</strong></summary>
-			<app-class-config [classes]='grid.classes'></app-class-config>
+			<app-class-config [grid]='_uiService.grid'></app-class-config>
 		</details>
 	</li>
 </ul>
